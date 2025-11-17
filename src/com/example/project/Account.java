@@ -5,13 +5,17 @@ public class Account {
     private String accountHolderName;
     private double balance;
 
-    public Account(String accountNumber, String accountHolderName) {
-        this.accountNumber = accountNumber;
+    public Account(String id, String accountHolderName,double balance) {
+        this.accountNumber = id;
         this.accountHolderName = accountHolderName;
         this.balance = 0;
     }
 
-    public void deposit(double amount) {
+    public Account(int id, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
             System.out.println("Deposited: " + amount);
